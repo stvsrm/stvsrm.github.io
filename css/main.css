@@ -3,7 +3,6 @@
 
 	--frame-padding: 20px;
 
-	--nav-blur-size: 1.75rem;
 	--nav-padding-vertical: 1rem;
 
 
@@ -231,13 +230,6 @@ html {
 /* -- Nav -- */
 .primary-nav {
 	width: 100%;
-}
-
-@supports (backdrop-filter: blur(var(--nav-blur-size))) or (-webkit-backdrop-filter: blur(var(--nav-blur-size))) {
-	.primary-nav {
-		backdrop-filter: blur(var(--nav-blur-size));
-		-webkit-backdrop-filter: blur(var(--nav-blur-size));
-	}
 }
 
 /* -- Nav ul -- */
