@@ -15,6 +15,7 @@
 	--mobile-toggle-size: 1.3rem;
 	--mobile-nav-padding-bottom: 24px;
 	--mobile-nav-padding-left: 18%;
+	--mobile-nav-color: #212121;
 
 	--header-height: calc(var(--main-font-size) + (var(--nav-padding-vertical) * 2));
 }
@@ -323,14 +324,6 @@ html {
 
 	.primary-nav-ul[data-visible="true"] {
 		transform: translateX(0%);
-	}
-
-	@supports (backdrop-filter: blur(var(--nav-mobile-blur-size))) or (-webkit-backdrop-filter: blur(var(--nav-mobile-blur-size))) {
-		.primary-nav-ul {
-			backdrop-filter: blur(var(--nav-mobile-blur-size));
-			-webkit-backdrop-filter: blur(var(--nav-mobile-blur-size));
-			background: var(--mobile-nav-blur-color);
-		}
 	}
 
 	.content {
