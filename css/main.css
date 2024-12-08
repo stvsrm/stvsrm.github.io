@@ -312,7 +312,7 @@ html {
 		position: fixed;
 		border: none;
 		background: var(--mobile-nav-color);
-		inset: 0 0 0 31%;
+		inset: 0 0 0 50%;
 		flex-direction: column;
 		--gap: var(--mobile-nav-gap);
 		padding: 0 0 var(--mobile-nav-padding-bottom) var(--mobile-nav-padding-left);
