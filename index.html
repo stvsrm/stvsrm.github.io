@@ -5,11 +5,13 @@
 	<meta name="description" content="Steve Sarmiento's Work">
 	<meta name="author" content="Steve Sarmiento">
 	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="/css/projects.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Cormorant:wght@300..700&display=swap">
 	<script src="/scripts/nav.js" defer></script>
+	<script src="/scripts/macy.js" defer></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 </head>
@@ -25,28 +27,58 @@
 	</div>
 
 	<div id="frame">
-
+		<div id="frame-header-border"></div>
 		<a class="name" id="nameLeft">STEVE</a>
 		<a class="name" id="nameRight">SARMIENTO</a>
-		
-		<header class="primary-header flex">
-
-			<button class="nav-mobile-toggle" aria-controls="primary-nav-ul" aria-expanded="false">
-				<span class="sr-only">Menu</span>
-			</button>
-
-			<nav class="primary-nav">
-				<ul class="primary-nav-ul flex" data-visible="false">
-					<li class="selected">
-						<a href="/">PROJECTS.</a>
-					<li>
-						<a href="/about/">ABOUT ME.</a>
-					<li>
-						<a href="/contact/">CONTACT.</a>
-				</ul>
-			</nav>
-		</header>
 	</div>
+
+	<header class="primary-header flex">
+
+		<button class="nav-mobile-toggle" aria-controls="primary-nav-ul" aria-expanded="false">
+			<span class="sr-only">Menu</span>
+		</button>
+
+		<nav class="primary-nav">
+			<ul class="primary-nav-ul flex" data-visible="false">
+				<li class="selected">
+					<a href="/">PROJECTS.</a>
+				<li>
+					<a href="/about/">ABOUT ME.</a>
+				<li>
+					<a href="/contact/">CONTACT.</a>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="content">
+		<div class="masonry">
+
+			<div class="masonry-panel">
+				<img class="masonry-images" src="/images/projects/mouth.PNG" alt="">
+			</div>
+
+			<div class="masonry-panel">
+				<img class="masonry-images" src="/images/projects/444.png" alt="">
+			</div>
+
+			<div class="masonry-panel">
+				<img class="masonry-images" src="/images/projects/afterhours.png" alt="">
+			</div>
+
+			<div class="masonry-panel">
+				<img class="masonry-images" src="/images/projects/tunnel.jpg" alt="">
+			</div>
+
+			<div class="masonry-panel">
+				<img class="masonry-images" src="/images/projects/collage.jpeg" alt="">
+			</div>
+
+			<div class="masonry-panel">
+				<img class="masonry-images" src="/images/projects/cemetary.jpg" alt="">
+			</div>
+
+		</div>
+	</main>
 
 </body>
 </html>

@@ -209,6 +209,12 @@ html {
 	mix-blend-mode: difference;
 }
 
+#frame-header-border {
+	width: 100%;
+	height: var(--header-height);
+	border-bottom: solid 1px #fff;
+}
+
 /* -- Name -- */
 
 #nameLeft {
@@ -223,8 +229,12 @@ html {
 
 /* -- Header -- */
 .primary-header {
-	border-bottom: solid 1px #fff;
+	position: fixed;
+	width: calc(100% - (var(--frame-padding) * 2));
+	left: var(--frame-padding);
+	top: var(--frame-padding);
 	pointer-events: initial;
+	z-index: 999;
 }
 
 /* -- Mobile Toggle -- */
@@ -259,6 +269,17 @@ html {
 	text-decoration: line-through;
 }
 
+/*-- CONTENT --*/
+.content {
+	position: fixed;
+	overflow-y: scroll;
+	width: calc(100% - (var(--frame-padding) * 4) - 2px);
+	height: calc(100% - (var(--frame-padding) * 4) - var(--header-height) - 3px);
+	left: calc(var(--frame-padding) * 2);
+	top: calc((var(--frame-padding) * 2) + var(--header-height) + 2px);
+	z-index: 10;
+}
+
 
 
 /* ------------ DESKTOP ------------ */
@@ -280,6 +301,10 @@ html {
 /* ------------ MOBILE ------------ */
 
 @media (max-width: 35em) {
+
+	#frame-header-border {
+		display: none;
+	}
 
 	.primary-header {
 		border: none;
@@ -312,7 +337,7 @@ html {
 		position: fixed;
 		border: none;
 		background: var(--mobile-nav-color);
-		inset: 0 0 0 50%;
+		inset: 0 0 0 42%;
 		flex-direction: column;
 		--gap: var(--mobile-nav-gap);
 		margin: 0;
@@ -329,11 +354,5 @@ html {
 		text-align: center;
 		width: 100%;
 		margin: 1rem 0;
-	}
-
-	.content {
-		width: calc(100% - (var(--frame-padding) * 4));
-		margin: 0 auto;
-		padding: calc(var(--frame-padding) * 2) 0;
 	}
 }

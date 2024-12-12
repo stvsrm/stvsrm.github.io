@@ -1,0 +1,21 @@
+.masonry-images {
+	display: block;
+	width: 100% !important;
+	height: auto !important;
+	opacity: 1.0;
+	transition: ease 350ms opacity;
+}
+
+.masonry-images:hover, .masonry-images:active {
+	opacity: 0.65;
+}
+
+/* ---- MEDIUM ---- */
+
+@media (max-width: 62em) {
+}
+
+/* ---- MOBILE ---- */
+
+@media (max-width: 35em) {
+}
