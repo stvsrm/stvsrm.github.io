@@ -15,7 +15,9 @@
 	--mobile-toggle-size: 1.3rem;
 	--mobile-nav-padding-bottom: 24px;
 	--mobile-nav-padding-left: 18%;
-	--mobile-nav-color: #212121;
+	--mobile-nav-color: #141414;
+	--nav-mobile-blur-size: 4rem;
+	--mobile-nav-blur-color: rgba(18,18,18,0.5);
 
 	--header-height: calc(var(--main-font-size) + (var(--nav-padding-vertical) * 2));
 }
@@ -218,12 +220,12 @@ html {
 /* -- Name -- */
 
 #nameLeft {
-	left: var(--frame-padding);
+	left: calc(var(--frame-padding) + 0.5px);
 	bottom: calc(var(--frame-padding) * 2);
 }
 
 #nameRight {
-	right: var(--frame-padding);
+	right: calc(var(--frame-padding) + 0.5px);
 	top: calc((var(--frame-padding) * 2) + var(--header-height));
 }
 
@@ -348,6 +350,14 @@ html {
 
 	.primary-nav-ul[data-visible="true"] {
 		transform: translateX(0%);
+	}
+
+	@supports (backdrop-filter: blur(var(--nav-mobile-blur-size))) or (-webkit-backdrop-filter: blur(var(--nav-mobile-blur-size))) {
+		.primary-nav-ul {
+			backdrop-filter: blur(var(--nav-mobile-blur-size));
+			-webkit-backdrop-filter: blur(var(--nav-mobile-blur-size));
+			background: var(--mobile-nav-blur-color);
+		}
 	}
 
 	.primary-nav-ul li {
