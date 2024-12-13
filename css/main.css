@@ -15,12 +15,10 @@
 	--mobile-toggle-size: 1.3rem;
 	--mobile-nav-color: #141414;
 	--nav-mobile-blur-size: 4rem;
-	--mobile-nav-blur-color: rgba(18,18,18,0.5);
+	--mobile-nav-blur-color: rgba(18, 18, 18, 0.5);
 
 	--header-height: calc(var(--main-font-size) + (var(--nav-padding-vertical) * 2));
 }
-
-
 
 /* ------------ Utility Classes ------------ */
 
@@ -273,11 +271,39 @@ html {
 .content {
 	position: fixed;
 	overflow-y: scroll;
-	width: calc(100% - (var(--frame-padding) * 4) - 2px);
+	width: calc(100% - (var(--frame-padding) * 4));
 	height: calc(100% - (var(--frame-padding) * 4) - var(--header-height) - 3px);
 	left: calc(var(--frame-padding) * 2);
 	top: calc((var(--frame-padding) * 2) + var(--header-height) + 2px);
 	z-index: 10;
+}
+
+.content {
+  --sb-track-color: transparent;
+  --sb-thumb-color: rgba(255,255,255,0.6);
+  --sb-size: 2px;
+}
+
+.content::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+.content::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
+  }
 }
 
 

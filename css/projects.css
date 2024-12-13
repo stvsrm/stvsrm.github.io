@@ -1,16 +1,20 @@
+.masonry-panel {
+	padding: 20px;
+}
+
 .masonry-images {
 	display: block;
 	width: 100% !important;
 	height: auto !important;
 	opacity: 1.0;
-	transition: ease 350ms opacity;
+	transition: ease 350ms padding;
 }
 
 .masonry-images:hover {
-	opacity: 0.8;
+	padding: 10px;
 }
 
-/* ---- MEDIUM ---- */
+/* ---- Tablet ---- */
 
 @media (max-width: 62em) {
 }
@@ -18,4 +22,7 @@
 /* ---- MOBILE ---- */
 
 @media (max-width: 35em) {
+	.masonry-panel {
+		padding: 0px;
+	}
 }
