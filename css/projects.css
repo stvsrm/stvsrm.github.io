@@ -6,8 +6,8 @@
 	transition: ease 350ms opacity;
 }
 
-.masonry-images:hover, .masonry-images:active {
-	opacity: 0.65;
+.masonry-images:hover {
+	opacity: 0.8;
 }
 
 /* ---- MEDIUM ---- */
