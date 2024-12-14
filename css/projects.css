@@ -5,7 +5,7 @@
 .masonry-images {
 	display: block;
 	width: 100% !important;
-	height: auto !important;
+	height: 100% !important;
 	opacity: 1.0;
 	transition: ease 350ms padding;
 }
