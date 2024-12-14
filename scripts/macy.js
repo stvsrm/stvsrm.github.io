@@ -2,9 +2,9 @@
 
 var main = Macy({
 	container: document.querySelector('.masonry'),
-	trueOrder: true,
+	trueOrder: false,
 	margin: 0,
-	waitForImages: false,
+	waitForImages: true,
 	useOwnImageLoader: false,
 	mobileFirst: true,
 	columns: 1,
