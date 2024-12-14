@@ -276,6 +276,7 @@ html {
 	left: calc(var(--frame-padding) * 2);
 	top: calc((var(--frame-padding) * 2) + var(--header-height) + 2px);
 	z-index: 10;
+	scrollbar-width: thin;
 }
 
 .content {
