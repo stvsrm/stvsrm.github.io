@@ -1,0 +1,12 @@
+.about {
+	display: flex;
+	width: calc(100% - 20px);
+	height: 100%;
+	margin: -16px auto 0 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.about-text {
+	text-align: center;
+}

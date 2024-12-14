@@ -1,0 +1,23 @@
+.content {
+	mix-blend-mode: difference;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	width: calc(100% - 20px);
+	height: 100%;
+	margin: -16px auto 0 auto;
+	align-items: center;
+	justify-content: center;
+}
+
+.contact img {
+	width: 32px;
+	aspect-ratio: 1;
+	margin-bottom: 0.6rem;
+}
+
+.contact a {
+	text-decoration: none;
+}
