@@ -1,5 +1,5 @@
 .masonry-panel {
-	padding: 20px;
+	padding: var(--frame-padding);
 }
 
 .masonry-images {
@@ -8,21 +8,138 @@
 	height: 100% !important;
 	opacity: 1.0;
 	transition: ease 350ms padding;
+	cursor: pointer;
 }
 
 .masonry-images:hover {
 	padding: 10px;
 }
 
+
+
+/* The Modal (background) */
+#modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	padding: calc(var(--frame-padding) * 4);
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.close-button {
+	position: absolute;
+	display: block;
+	background-color: transparent;
+	background-image: url("/images/close.svg");
+	background-repeat: no-repeat;
+	border: none;
+	width: var(--mobile-toggle-size);
+	aspect-ratio: 1;
+	top: calc(var(--frame-padding) * 2);
+	right: calc(var(--frame-padding) * 2);
+	z-index: 9999;
+	cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+	opacity: 0.7;
+}
+
+/* Hide the slides by default */
+.mySlides {
+	display: none;
+	height: 100%;
+	width: 100%;
+	align-content: center;
+}
+
+.slide-img {
+	width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.prev {
+	margin-left: -60px;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	margin-right: -60px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
 /* ---- Tablet ---- */
 
-@media (max-width: 62em) {
-}
+@media (max-width: 62em) {}
+
+
 
 /* ---- MOBILE ---- */
 
 @media (max-width: 35em) {
 	.masonry-panel {
 		padding: 0px;
+	}
+
+	#modal {
+		padding: calc(var(--frame-padding) * 2);
+	}
+
+	.modal-content {
+		height: calc(100% - (var(--frame-padding) * 4));
+	}
+
+	.next, .prev {
+		padding: 12px;
+	}
+
+	.prev {
+		margin-left: -44px;
+	}
+	
+	/* Position the "next button" to the right */
+	.next {
+		right: 0;
+		margin-right: -44px;
 	}
 }

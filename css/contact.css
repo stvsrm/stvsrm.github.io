@@ -5,7 +5,7 @@
 .contact {
 	display: flex;
 	flex-direction: column;
-	width: calc(100% - 20px);
+	width: calc(100% - var(--frame-padding));
 	height: 100%;
 	margin: -16px auto 0 auto;
 	align-items: center;

@@ -10,21 +10,21 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap">
-	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Cormorant:wght@300..700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Infant&family=Cormorant:wght@300..700&display=swap">
 	<script src="/scripts/nav.js" defer></script>
 	<script src="/scripts/macy.js" defer></script>
+	<script src="/scripts/lightbox.js" defer></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
 </head>
 
 <body>
+
 	<div id="bg-video-noise-container">
 		<div id="bg-video-noise"></div>
 	</div>
 	<div id="bg-video-container">
-		<video class="bg-video" disablePictureInPicture playsinline autoplay loop muted preload="metadata"
-			crossorigin="anonymous">
+		<video class="bg-video" disablePictureInPicture playsinline autoplay loop muted preload="metadata" crossorigin="anonymous">
 			<source type="video/mp4" src="/videos/bg.mp4">
 		</video>
 	</div>
@@ -57,69 +57,155 @@
 
 			</ul>
 		</nav>
+
 	</header>
 
 	<main class="content">
 		<div class="masonry">
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/suicide.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/bedroom.jpeg" onclick="openModal();currentSlide(1)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/eyeroom.jpeg" alt="">
+				<img class="masonry-images" src="/images/projects/suicide.jpg" onclick="openModal();currentSlide(2)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/redroomv3.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/eyeroom.jpeg" onclick="openModal();currentSlide(3)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/bunny.gif" alt="">
+				<img class="masonry-images" src="/images/projects/redroomv3.jpg" onclick="openModal();currentSlide(4)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/iwwfy.gif" alt="">
+				<img class="masonry-images" src="/images/projects/bunny.gif" onclick="openModal();currentSlide(5)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/fred_again.gif" alt="">
+				<img class="masonry-images" src="/images/projects/iwwfy.gif" onclick="openModal();currentSlide(6)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/mouth.PNG" alt="">
+				<img class="masonry-images" src="/images/projects/fred_again.gif" onclick="openModal();currentSlide(7)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/afterhours.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/mouth.PNG" onclick="openModal();currentSlide(8)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/444.png" alt="">
+				<img class="masonry-images" src="/images/projects/afterhours.jpg" onclick="openModal();currentSlide(9)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/collage_03.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/444.png" onclick="openModal();currentSlide(10)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/collage_cemetary.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/collage_03.jpg" onclick="openModal();currentSlide(11)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/tunnel.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/collage_cemetary.jpg" onclick="openModal();currentSlide(12)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/collage_02.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/tunnel.jpg" onclick="openModal();currentSlide(13)" alt="">
 			</div>
 
 			<div class="masonry-panel">
-				<img class="masonry-images" src="/images/projects/collage_01.jpg" alt="">
+				<img class="masonry-images" src="/images/projects/collage_02.jpg" onclick="openModal();currentSlide(14)" alt="">
+			</div>
+
+			<div class="masonry-panel">
+				<img class="masonry-images" src="/images/projects/collage_01.jpg" onclick="openModal();currentSlide(15)" alt="">
 			</div>
 
 		</div>
 	</main>
+
+	<div id="modal">
+
+		<button class="close-button" onclick="closeModal()">
+			<span class="sr-only">Menu</span>
+		</button>
+
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<img src="/images/projects/bedroom.jpeg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/suicide.jpg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/eyeroom.jpeg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/redroomv3.jpg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<video class="slide-img" disablePictureInPicture playsinline loop controls preload="metadata" crossorigin="anonymous" class="slide-img">
+					<source type="video/mp4" src="/images/projects/bunny_final.mp4">
+				</video>
+			</div>
+
+			<div class="mySlides">
+				<video class="slide-img" disablePictureInPicture playsinline loop controls preload="metadata" crossorigin="anonymous" class="slide-img">
+					<source type="video/mp4" src="/images/projects/iwwfy_final.mp4">
+				</video>
+			</div>
+
+			<div class="mySlides">
+				<video class="slide-img" disablePictureInPicture playsinline loop controls preload="metadata" crossorigin="anonymous" class="slide-img">
+					<source type="video/mp4" src="/images/projects/fred_again_final.mp4">
+				</video>
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/mouth.png" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/afterhours.jpg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/444.png" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/collage_03.jpg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/collage_cemetary.jpg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/tunnel.jpg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/collage_02.jpg" class="slide-img">
+			</div>
+
+			<div class="mySlides">
+				<img src="/images/projects/collage_01.jpg" class="slide-img">
+			</div>
+
+			<!-- Next/previous controls -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		</div>
+	</div>
 
 </body>
 </html>
